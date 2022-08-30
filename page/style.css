@@ -1,0 +1,106 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Times New Roman";
+}
+header{
+    /*Gray linear gradient + background picture, so that the background picture is not a blank background when it is invalid.
+    Background: the James Webb Space Telescope was specially selected to photograph and release the Carina Nebula some time ago, which is very romantic*/
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("./Carina_Nebula.jpg");
+    /*The height of the visible area inside the browser*/
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin: 15px;
+    transition: transformer 0.5s;
+}
+/*ul at present, there are only pictures. Select floating, and use margin and delay 0.5s animation transition.
+(the last one is to combine with the ".card:hover" module behind. When the mouse is placed on the picture, the picture will move up.)*/
+ul li{
+    display: inline-block;
+    transition: transformer 0.5s;
+}
+/*The hyperlink label style is designed here first and has not been used yet*/
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: .6s ease;
+    border-radius: 20px;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+/*Realize the floating feature. After all, it's too ugly to put a picture on.
+After that, I'm going to realize the preview function of the magnifying glass. These are all from other websites before, so I'll learn by myself*/
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+/*The active effect is added when clicking the hyperlink. The hyperlink jump was designed in the picture before, but it was deleted later. However, this CSS is still kept*/
+ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+/* AGCN Homepage :Absolute center position. Here are some simple CSS format designs for the search box as follow.*/
+.title{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    color: #fff;
+    font-size: 70px;
+    font-family: Century Gothic;
+}
+.li2{
+    margin: 70px 200px;
+}
+.search-box{
+    float: bottom;
+    display: flex;
+    height: 50px;
+    position: relative;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%,-10%);
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.search-btn{
+    height:50px;
+    width: 120px;
+    border-radius: 25px;
+    background: #ffeb3b;
+    display: flex;
+    /*color: #AFFFFF;*/
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+/*When the mouse pointer moves to the button, it turns into a small hand*/
+.search-btn:hover{
+    background: #ffc107;
+    cursor: pointer;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #AFFFFF;
+    font-size: 20px;
+    line-height: 40px;
+    width: 400px;
+}

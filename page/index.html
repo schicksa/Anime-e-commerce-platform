@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Edge mode informs Windows Internet Explorer to display content in the highest level of available mode-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--The width of the area where the web page is displayed on the browser is the width of the device.
+    The page is displayed according to the actual size without any scaling, but there may be blank parts on the display screen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime e-commerce platform</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+<header>
+    <div class="main">
+        <!--The main div currently includes two parts, one is the search box, and the other is the navigation bar.
+        The search box is a simple input area and button-->
+        <div class="search-box">
+            <input class="search-txt" type="text" placeholder="Goods to search">
+            <button class="search-btn" type="button">
+                Search
+            </button>
+        <!--This ul list is navigation bar, which only include four parts.
+        In order to highlight the importance of "Anime", it is specially enclosed with span in different colors-->
+        <ul>
+            <li class="active"><a href="#">Index</a></li>
+            <li><a href="#" target="_blank">Slide show</a></li>
+            <li><a href="#" target="_blank">Goods list</a></li>
+            <li><a href="#" target="_blank"><span style="color: crimson;">Anime</span> information</a></li>
+
+        </ul>
+        </div>
+
+    </div>
+    <!--In order to display multiple pictures in the same area, the ul li tag is still used after comparing several methods,
+    and after real-time comparison of the page display size, 366 * 250 is selected after adjustment-->
+    <ul>
+        <li class="card1 card"><img src="http://p2.qhimg.com/bdm/768_474_0/t018d5f40ba406b298c.jpg" width="366" height="250"></li>
+        <li class="card2 card"><img src="http://p8.qhimg.com/bdm/768_474_0/t01e5f605262fb61fb4.jpg" width="366" height="250"></li>
+        <li class="card3 card"><img src="http://p1.qhimg.com/bdm/768_474_0/t01a7e20297ee92fdd5.jpg" width="366" height="250"></li>
+        <li class="card4 card"><img src="http://p1.qhimg.com/bdm/768_474_0/t011917e5b14e3cd8e8.jpg" width="366" height="250"></li>
+    </ul>
+    <!--We added our welcome slogan in the center of the picture, which means welcome home, to prevent monotony. It's old-fashioned.-->
+    <div class="title">
+        <h1><span style="color: crimson;">AGCN </span> Homepage</h1>
+    </div>
+    <!--For the sake of the asymmetric aesthetics that I like, I choose the form of top four and bottom three.
+However, in this way, the width of the picture in the following li needs to be adjusted, and the margin and padding attributes (class = "li2") are added in the CSS file-->
+    <ul class="li2">
+        <li class="card5 card"><img src="http://p9.qhimg.com/bdm/768_474_0/t0153df2c1ccb1f5c1a.jpg" width="366" height="266"></li>
+        <li class="card6 card"><img src="http://p5.qhimg.com/bdm/768_474_0/t01c04a7dd1f7c808ec.jpg" width="366" height="266"></li>
+        <li class="card7 card"><img src="http://p4.qhimg.com/bdm/768_474_0/t01654ebd1596257961.jpg" width="366" height="266"></li>
+    </ul>
+</header>
+</body>
+</html>
