@@ -47,28 +47,20 @@ Vue2 + VueRouter + Vuex + Axios + Less + NodeJs + express(Only JWT generation an
 ### Page
 
 /home
-
 /banner(including search)
-
-/rsegister 
-
+/register 
 /login 
-
+/profile
 /cart 
-
 /favorites
-
 /commdity
-
 /magnifer 
-
-/profile 
-
 /* -- 404 
 
 ### Component
 
 Header
+Footer
 NoData
 Preview
 Loading
