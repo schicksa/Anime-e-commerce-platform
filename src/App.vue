@@ -6,6 +6,7 @@
         <router-view @hiddenBody="hiddenBodyHandler"></router-view>
       </transition>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default {
   },
   components: {
     Header,
+    // eslint-disable-next-line vue/no-unused-components
     Footer,
   },
   methods: {
