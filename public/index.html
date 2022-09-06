@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -8,27 +8,31 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.0.0/swiper-bundle.min.css" rel="stylesheet">
     <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.0.0/swiper-bundle.min.js"></script>
-  </head>
-  <style>
+</head>
+<style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: "Times New Roman";
     }
-
-    body {
-      font: 12px/20px tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53",
-        sans-serif;
+    html,body {
+        font: 12px "Times New Roman";
+        height:100%;
     }
     .building{
+        background-attachment: fixed;
         background-color: #f7bcbc;
         /*background-image: "url(img/bg0.jpg")";*/
         background:url("img/bg0.jpg");
+        position : absolute;
         width:100%;
         height:100%;
-        position:fixed;
-        background-size:100% 100%;}
+        background-size:100% 100%;
+        overflow:auto;
+        /*min-height: max-content;*/
+    }
+
   </style>
   <body>
     <div class="building" id="myDiv">
@@ -37,7 +41,9 @@
   </body>
 </html>
 <script>
-    var imgArr=['bg0.jpg','bg1.jpg','bg2.jpeg','bg3.jpg','bg4.jpg'];//Defines an array to hold all the pictures
+    var imgArr=['bg0.jpg','bg1.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','bg6.jpg','bg7.jpg','bg8.jpg','bg9.jpg'];//Defines an array to hold all the pictures
+    /*
+    //time change
     window.onload = function  changeImg() {
         var img = document.getElementById("myDiv");
         function time(){
@@ -50,7 +56,18 @@
             }
             img.style.backgroundImage = "url(img/" + imgArr[currentImg] + ")";
         }
-        // setInterval(time,10000);//The time1() function is called in a loop at n ms intervals
+        setInterval(time,60*1000);//The time1() function is called in a loop at n ms intervals
     }
-    // changeImg();
+    */
+    //flush change
+    var currentImg2=Math.floor(Math.random()*(imgArr.length));   //This is used to take the index subscript of the image.
+    window.onload = function  changeImg2() {
+        var img = document.getElementById("myDiv");
+        if (currentImg2 >= (imgArr.length-1)) {
+            currentImg2 = 0
+        }  //When the index of a picture exceeds the number of pictures, it starts with the first one
+        else {
+            currentImg2++;
+        }
+        img.style.backgroundImage = "url(img/" + imgArr[currentImg2] + ")";
 </script>
