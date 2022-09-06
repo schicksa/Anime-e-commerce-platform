@@ -6,6 +6,6 @@ module.exports = {
     },
     crypto:"sha256",
     // expire:60 * 1000 * 60 * 24, // one day
-    expire:30 * 1000,
+    expire:60 * 1000,
     port:3001
 }
