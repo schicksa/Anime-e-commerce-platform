@@ -7,6 +7,7 @@ When users are not logged in, they can only watch the products, but cannot colle
 
 #### Manual Start
 **Run in the project root directory**
+
 ~ If you download node_modules folder, you can skip this command.
 ```Bash
 yarn install  
@@ -40,9 +41,9 @@ yarn install
 ### Dependencies
 
 - vue2.x
-- yarn(npm install -g yarn)
-- json-server
-- nodemon(npm install -g nodemon)
+- yarn   (npm install -g yarn)
+- json-server   (npm install -g json-server)
+- nodemon    (npm install -g nodemon)
 
 ### technology stack
 
